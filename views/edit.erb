@@ -1,11 +1,10 @@
 <% if @kaizen %>
 	<form action="/<%= @kaizen.id %>" method="post" id="edit">
 		<input type="hidden" name="_method" value="put">
-		<textarea name="content"><%= @kaizen.content %></textarea>
-		<input type="checkbox" name="complete" <%= "checked" if @kaizen.complete %>>
-		<input type="submit">
+		<input type="text" name="content" value="<%= @kaizen.content %>">
+		<input type="submit" value="OK">
 	</form>
-	<p><a href="/<%= @kaizen.id %>/delete">Delete</a></p>
+	<p><a href="/<%= @kaizen.id %>/delete" class="negative">Delete</a></p>
 <% else %>
 	<p>Kaizen not found</p>
 <% end %>

@@ -30,7 +30,7 @@ time, mark, audio, video {
     border:0;  
     font-size:100%;  
     font: inherit;  
-    vertical-align:baselinebaseline;  
+    vertical-align:baseline;  
 }  
   
 article, aside, details, figcaption, figure,  
@@ -104,11 +104,11 @@ td { vertical-align: top; }
 /* set sub, sup without affecting line-height: gist.github.com/413930 */  
 sub, sup { font-size: 75%; line-height: 0; position: relative; }  
 sup { top: -0.5em; }  
-sub { bottombottom: -0.25em; }  
+sub { bottom: -0.25em; }  
   
 pre {  
     /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */  
-    whitewhite-space: pre; whitewhite-space: pre-wrap; whitewhite-space: pre-line; word-wrap: break-word;  
+    white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word;  
     padding: 15px;  
 }  
   
@@ -118,8 +118,8 @@ textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-tex
   
 /* align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */  
 input[type="radio"] { vertical-align: text-bottom; }  
-input[type="checkbox"] { vertical-align: bottombottom; }  
-.ie7 input[type="checkbox"] { vertical-align: baselinebaseline; }  
+input[type="checkbox"] { vertical-align: bottom; }  
+.ie7 input[type="checkbox"] { vertical-align: baseline; }  
 .ie6 input { vertical-align: text-bottom; }  
   
 /* hand cursor on clickable input elements */  

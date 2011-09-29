@@ -1,7 +1,7 @@
 <section id="add">
 	<form action="/" method="post">
-		<textarea name="content" placeholder="Your kaizen&hellip;"></textarea>
-		<input type="submit" value="Submit">
+		<input type="text" name="content" placeholder="Your kaizen&hellip;">
+		<input type="submit" value="OK">
 	</form>
 </section>
 
@@ -11,8 +11,8 @@
 			<%= kaizen.content %>
 			<span><a href="/<%= kaizen.id %>">[edit]</a></span>
 		</p>
-		<p class="links">
-			<a href="/<%= kaizen.id %>/complete">&#8623;</a>
+		<p class="check">
+			<a href="/<%= kaizen.id %>/complete">&#10003;</a>
 		</p>
 		<p class="meta">Created: <%= kaizen.created_at %></p>
 	</article>

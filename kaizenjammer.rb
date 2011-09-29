@@ -18,7 +18,7 @@ end
 
 get '/:id' do
 	@kaizen = Kaizen.get params[:id]
-	@title = "Edit kaizen ## {params[:id]}"
+	@title = "Edit kaizen ##{params[:id]}"
 	erb :edit
 end
 

@@ -1,9 +1,9 @@
 <% if @kaizen %>
 	<p>Are you sure you want to delete the following kaizen: <em>"<%= @kaizen.content %>"</em>?</p>
-	<form action="/<%= @kaizen.id %>" method="post">
+	<form action="/<%= @kaizen.id %>" method="post" class="delete">
 		<input type="hidden" name="_method" value="delete">
-		<input type="submit" value="Yes, delete it!">
-		<a href="/<%= @kaizen.id %>">Cancel</a>
+		<input type="submit" value="Yes!">
+		<a href="/<%= @kaizen.id %>" class="negative">Cancel</a>
 	</form>
 <% else %>
 	<p>Kaizen not found.</p>
