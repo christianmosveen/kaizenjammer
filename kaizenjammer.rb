@@ -16,6 +16,39 @@ post '/' do
 	redirect '/'
 end
 
+get '/:id' do
+	@kaizen = Kaizen.get params[:id]
+	@title = "Edit kaizen ## {params[:id]}"
+	erb :edit
+end
+
+put '/:id' do
+	k = Kaizen.get params[:id]
+	k.content = params[:content]
+	k.complete = params[:complete] ? 1 : 0
+	k.save
+	redirect '/'
+end
+
+get '/:id/complete' do
+	k = Kaizen.get params[:id]
+	k.complete = k.complete ? 0 : 1
+	k.save
+	redirect '/'
+end
+
+get '/:id/delete' do
+	@kaizen = Kaizen.get params[:id]
+	@title = "Confirm deletion of kaizen ##{params[:id]}"
+	erb :delete
+end
+
+delete '/:id' do
+	k = Kaizen.get params[:id]
+	k.destroy
+	redirect '/'
+end
+
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/kaizenjammer.db")
 
 class Kaizen

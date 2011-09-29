@@ -6,7 +6,7 @@
 </section>
 
 <% @kaizens.each do |kaizen| %>
-	<article <% 'class="complete"' if kaizen.complete %>>
+	<article <%= 'class="complete"' if kaizen.complete %>>
 		<p>
 			<%= kaizen.content %>
 			<span><a href="/<%= kaizen.id %>">[edit]</a></span>
