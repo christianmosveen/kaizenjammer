@@ -5,4 +5,15 @@
 	</form>
 </section>
 
-<% #display notes %>
+<% @kaizens.each do |kaizen| %>
+	<article <% 'class="complete"' if kaizen.complete %>>
+		<p>
+			<%= kaizen.content %>
+			<span><a href="/<%= kaizen.id %>">[edit]</a></span>
+		</p>
+		<p class="links">
+			<a href="/<%= kaizen.id %>/complete">&#8623;</a>
+		</p>
+		<p class="meta">Created: <%= kaizen.created_at %></p>
+	</article>
+<% end %>
