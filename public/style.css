@@ -4,6 +4,7 @@ body {
     font-family: Cambria, Georgia, "Times New Roman", Times, serif;
     font-size: 1.5em;
     color: #333;
+    background: none repeat scroll 0 0 #232927;
 }
 
 a {
@@ -17,11 +18,13 @@ header {
   
 header h1 {  
     display: inline;  
-    font-size: 32px;  
+    font-size: 3.9em;
+    color: #FF6699;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 #476871, 3px 3px 0 #476871, 4px 4px 0 #476871, 5px 5px 0 #476871, 6px 6px 0 #476871, 7px 7px 0 #476871;
 }  
   
 header h1 a:link, header h1 a:visited {  
-    color: #444;  
+    color: #FF6699;  
 }  
   
 header h2 {  
