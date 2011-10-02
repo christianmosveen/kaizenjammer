@@ -49,7 +49,7 @@ delete '/:id' do
 	redirect '/'
 end
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/kaizenjammer.db")
+DataMapper::setup(:default, ENV['DATABASE_URL'] || 'sqlite3://#{Dir.pwd}/kaizenjammer.db')
 
 class Kaizen
 	include DataMapper::Resource
