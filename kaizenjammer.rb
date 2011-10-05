@@ -49,6 +49,7 @@ delete '/:id' do
 	redirect '/'
 end
 
+
 DataMapper::setup(:default, ENV['DATABASE_URL'] || 'sqlite3://#{Dir.pwd}/kaizenjammer.db')
 
 class Kaizen
@@ -57,7 +58,25 @@ class Kaizen
 	property :content, Text, :required => true
 	property :complete, Boolean, :required => true, :default => false
 	property :created_at, DateTime
-	property :votes, Integer, :default => 0
+	property :score, Integer, :default => 0
+	has n, :votes
+	has n, :voters, :through => :votes
+end
+
+class Voter
+	include DataMapper::Resource
+	property :id, Serial
+	property :name, Text, :required => true
+	has n, :votes
+	has n, :kaizens, :through => :votes
+end
+
+class Vote
+	include DataMapper::Resource
+	property :id, Serial
+	property :created_at, DateTime
+	belongs_to :kaizen
+	belongs_to :voter
 end
 
 DataMapper.finalize.auto_upgrade!
