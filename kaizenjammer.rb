@@ -50,7 +50,7 @@ delete '/:id' do
 end
 
 
-DataMapper::setup(:default, ENV['DATABASE_URL'] || 'sqlite3://#{Dir.pwd}/kaizenjammer.db')
+DataMapper::setup(:default, ENV['DATABASE_URL'] || 'sqlite://'+Dir.pwd+'/kaizenjammer.db')
 
 class Kaizen
 	include DataMapper::Resource
