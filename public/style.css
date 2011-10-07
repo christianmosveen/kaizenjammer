@@ -31,7 +31,11 @@ header h2 {
     font-size: 16px;  
     font-style: italic;  
     color: #999;  
-}  
+}
+
+footer {
+    text-align: center;
+}
   
 #main {  
     margin: 0 0 20px 0;  
@@ -43,33 +47,35 @@ header h2 {
 
 input[type=text] {
     height: 35px;
-    width: 570px; 
+    width: 552px;
+    padding: 0 10px 0 10px;
 }
 
 input {
-    border: 1px solid #ddd;  
-    background: white;  
+    border: 0 solid #fff;  
+    background: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; 
 }
 
 input[type=submit] {
-    height: 39px;  
+    height: 37px;  
     width: 62px;
-    background-color: #aea;
+    background-image: linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);  
 }
   
 article {  
     border: 1px solid #eee;  
     border-top: none;  
     padding: 15px 10px;
-    margin: 0 1px 0 0;
-}  
-  
-article:first-of-type {  
-    border: 1px solid #eee;  
-}  
-  
-article:nth-child(even) {  
-    background: #fafafa;  
+    margin: 0 1px 10px 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #fff;
 }
   
 article span {  
@@ -105,10 +111,15 @@ p {
     color: #aea;
 }
 
-.delete {
-    padding: 0 250px;
+.delete p {
+    text-align: center;
+    color: #eee;
 }
 
-a.negative {
-    color: #eaa;
+.delete form {
+    padding: 10px 290px;
+}
+
+.delete a {
+    color: #FF6699;
 }
