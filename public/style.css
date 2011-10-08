@@ -46,9 +46,9 @@ footer {
 }
 
 input[type=text] {
-    height: 35px;
+    height: 34px;
     width: 552px;
-    padding: 0 10px 0 10px;
+    padding: 4px 10px 0 10px;
 }
 
 input {
@@ -60,11 +60,11 @@ input {
 }
 
 input[type=submit] {
-    height: 37px;  
+    height: 38px;  
     width: 62px;
-    background-image: linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);
-    background-image: -moz-linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);
-    background-image: -webkit-linear-gradient(bottom, rgb(255,90,109) 16%, rgb(255,102,153) 58%);  
+    background-image: linear-gradient(bottom, rgb(177,255,102) 16%, rgb(194,255,136) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(177,255,102) 16%, rgb(194,255,136) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(177,255,102) 16%, rgb(194,255,136) 58%);
 }
   
 article {  
