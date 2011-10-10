@@ -49,6 +49,22 @@ delete '/:id' do
 	redirect '/'
 end
 
+post '/:id/vote' do
+	kaizen = Kaizen.get params[:id]
+	ip = request.ip
+	if Voter.count :name => ip == 0
+		voter = Voter.new
+	else
+		voter = Voter.first :name => ip
+	vote = Vote.new
+	vote.created_at = Time.now
+	vote.kaizen = kaizen
+	vote.voter = voter
+	kaizen.votes << vote
+	voter.votes << vote
+	redirect '/'
+end
+
 
 DataMapper::setup(:default, ENV['DATABASE_URL'] || 'sqlite://'+Dir.pwd+'/kaizenjammer.db')
 
