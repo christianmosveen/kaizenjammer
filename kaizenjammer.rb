@@ -58,7 +58,6 @@ class Kaizen
 	property :content, Text, :required => true
 	property :complete, Boolean, :required => true, :default => false
 	property :created_at, DateTime
-	property :score, Integer, :default => 0
 	has n, :votes
 	has n, :voters, :through => :votes
 end

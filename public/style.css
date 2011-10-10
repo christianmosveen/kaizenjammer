@@ -76,11 +76,19 @@ article {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     background: #fff;
+    height: 60px;
 }
   
 article span {  
     font-size: 0.8em;  
-}  
+}
+
+article h2 {
+    display: block;
+    float: left;
+    font-size: 2em;
+    margin: 0 20px 0 12px;
+}
   
 p {  
     margin: 0 0 5px;  
@@ -90,25 +98,6 @@ p {
     font-size: 0.8em;  
     font-style: italic;  
     color: #888;  
-}  
-  
-.check {  
-    font-size: 1.8em;  
-    line-height: 0.8em;  
-    float: right;  
-    margin: -10px 0 0 0;
-}  
-  
-.check a {  
-    display: block;
-}
-
-.check a, .complete .check a:hover {
-    color: #ddd;
-}
-
-.check a:hover, .complete .check a {
-    color: #aea;
 }
 
 .delete p {

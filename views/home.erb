@@ -7,13 +7,13 @@
 
 <% @kaizens.each do |kaizen| %>
 	<article <%= 'class="complete"' if kaizen.complete %>>
-		<p>
-			<%= kaizen.content %>
-			<span>[<a href="/<%= kaizen.id %>">edit</a>|<a href="/<%= kaizen.id %>/delete">delete</a>]</span>
-		</p>
-		<p class="check">
-			<a href="/<%= kaizen.id %>/complete">&#10003;</a>
-		</p>
-		<p class="meta">Created: <%= kaizen.created_at %></p>
+		<h2><%= kaizen.score %></h2>
+		<div>
+			<p>
+				<%= kaizen.content %>
+				<span>[<a href="/<%= kaizen.id %>">edit</a>|<a href="/<%= kaizen.id %>/delete">delete</a>]</span>
+			</p>
+			<p class="meta">Created: <%= kaizen.created_at %></p>
+		</div>
 	</article>
 <% end %>
