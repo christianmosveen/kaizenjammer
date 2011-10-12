@@ -49,19 +49,30 @@ delete '/:id' do
 	redirect '/'
 end
 
-post '/:id/vote' do
+get '/:id/vote' do
 	kaizen = Kaizen.get params[:id]
 	ip = request.ip
+	
 	if Voter.count :name => ip == 0
 		voter = Voter.new
+		voter.name = ip
 	else
 		voter = Voter.first :name => ip
+	end
+
 	vote = Vote.new
 	vote.created_at = Time.now
 	vote.kaizen = kaizen
 	vote.voter = voter
+	
 	kaizen.votes << vote
 	voter.votes << vote
+
+	kaizen.save
+	voter.save
+
+	kaizen.votes.reload
+	
 	redirect '/'
 end
 
