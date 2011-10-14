@@ -3,7 +3,7 @@ require 'sinatra'
 require 'datamapper'
 
 get '/' do
-	@kaizens = Kaizen.all :order => :id.desc
+	@kaizens = Kaizen.all(:order => :id.desc).sort_by { |kaizen| -kaizen.votes.count }
 	@title = 'All Kaizens'
 	erb :home
 end
