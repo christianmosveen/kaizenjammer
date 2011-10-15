@@ -1,6 +1,7 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'sinatra'
-require 'datamapper'
+require 'data_mapper'
 
 get '/' do
 	@kaizens = Kaizen.all(:order => :id.desc).sort_by { |kaizen| -kaizen.votes.count }

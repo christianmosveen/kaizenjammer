@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 gem 'sinatra'
-gem 'datamapper'
+gem 'data_mapper', '1.2.0'
 
 group :development do
 	gem 'dm-sqlite-adapter'
